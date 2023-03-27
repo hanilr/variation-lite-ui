@@ -7,15 +7,16 @@
 # <div align="center"> ![vnl_wiki](../../img/vnl_wiki.png) <span style="color:#c83737">Variation-Lite-UI</span><span style="color:#e9e9e9">: </span><span style="color:#3737c8">WIKI ![vnl_wiki](../../img/vnl_wiki.png)</span> </div>
 
 ### ![vnl](../../img/vnl.png) <span style="color:#37c837">Wiki Topics</span> ![vnl](../../img/vnl.png)
-1. [Basics](#vnl_wiki-basics-vnl_wiki)
+1. Basics
     * Installation
     * Shared-Library
     * Include System
-2. [How Colors Work?](#vnl_wiki-how-colors-work-vnl_wiki)
+2. How Colors Work?
     * What is ASCII?
     * What is Escape Sequences?
     * How can we use these?
-3. [The Holy Three](#vnl_wiki-the-holy-three-vnl_wiki)
+    * Text Styles
+3. The Holy Three
     * Why there is only 3 function?
     * Function list
     * Alternative Functions
@@ -109,6 +110,18 @@ $ make clean
 <span style="color:#e9e9e9">If you have ASCII supported terminal you can use them.</span>
 
 <span style="color:#e9e9e9">For example, if you want to print something with color. Then you should do: `printf("%sHey Sup!%s", "\033[38;2;200;55;55m", "\033[0m");` This code will print `Hey Sup!` but foreground red. </span>
+
+## ![vnl](../../img/vnl.png) <span style="color:#e9e9e9">Text Styles</span> ![vnl](../../img/vnl.png)
+
+<span style="color:#e9e9e9">If you have ASCII supported terminal you can use them. Probably `vnl_blink` doesn't work on you terminal. </span>
+
+<span style="color:#e9e9e9">There is few text styles in ASCII and here how we use them. </span>
+
+1. `vnl_bold`: <span style="color:#e9e9e9">Bold style. </span>
+2. `vnl_italic`: <span style="color:#e9e9e9">Italic style.</span>
+3. `vnl_underline`: <span style="color:#e9e9e9">Normal text with underline.</span>
+4. `vnl_blink`:<span style="color:#e9e9e9">Text will blink.</span>
+5. `vnl_strikethrough`: <span style="color:#e9e9e9">Normal text with strikethrough.</span>
 
 ---
 
