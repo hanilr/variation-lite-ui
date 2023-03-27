@@ -13,7 +13,7 @@
 * Loading Screen
 * Word Guess Game
 
-###![vnl_example](../img/vnl_example.png) Colored Responsive Frame ![vnl_example](../img/vnl_example.png)
+### ![vnl_example](../img/vnl_example.png) Colored Responsive Frame ![vnl_example](../img/vnl_example.png)
 
 ```c
 #include <stdio.h>
@@ -76,7 +76,7 @@ int main() {
 } /* MADE BY @hanilr */
 ```
 
-###![vnl_example](../img/vnl_example.png) Complete Test ![vnl_example](../img/vnl_example.png)
+### ![vnl_example](../img/vnl_example.png) Complete Test ![vnl_example](../img/vnl_example.png)
 
 ```c
 #include <stdio.h>
@@ -222,7 +222,7 @@ int main() { vnl_terminal("display:clear");
 } /* MADE BY @hanilr */
 ```
 
-###![vnl_example](../img/vnl_example.png) Loading Screen ![vnl_example](../img/vnl_example.png)
+### ![vnl_example](../img/vnl_example.png) Loading Screen ![vnl_example](../img/vnl_example.png)
 
 ```c
 #include <stdio.h>
@@ -330,7 +330,7 @@ int main() { vnl_terminal("display:clear");
 } /* MADE BY @hanilr */
 ```
 
-###![vnl_example](../img/vnl_example.png) Word Guessing Game ![vnl_example](../img/vnl_example.png)
+### ![vnl_example](../img/vnl_example.png) Word Guessing Game ![vnl_example](../img/vnl_example.png)
 
 ```c
 #include <stdio.h>
