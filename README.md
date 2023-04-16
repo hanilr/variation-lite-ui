@@ -73,71 +73,111 @@ $ make clean
 >> ```
 > ![vnl_info](img/vnl_info.png) If you installed the library then you don't need to define. You can find this in `<vn/vnl_ui.h>`
 >> ```c
+>> #define VNL_UI_IMPLEMENTATION
 >> #include <vn/vnl_ui.h>
 >> ```
 
-![vnl_example](img/vnl_example.png) <span style="color:#e9e9e9">Colored Terminal Size Responsive Frame</span> ![vnl_example](img/vnl_example.png)
+![vnl_example](img/vnl_example.png) <span style="color:#e9e9e9">All command's usages</span> ![vnl_example](img/vnl_example.png)
 ```c
-#include <stdio.h>
-#include <unistd.h>
+#include <stdio.h> /* 'printf();', 'getchar();' */
+#include <ctype.h> /* 'toupper();' */
+#include <unistd.h> /* 'sleep();' */
 
-#define VNL_UI_IMPLEMENTATION
-#include "vnl_ui.h"
+#define VNL_UI_IMPLEMENTATION /* UNLOCK THE LIBRARY */
+#include "vnl_ui.h" /* USE LIKE THAT IF YOU INSTALLED THE LIBRARY */
 
-/* COLOR DEFINATION */
+/* Foreground Colors */
+#define black_fg (vnl_color("#161616", 0))
+#define white_fg (vnl_color("#e9e9e9", 0))
 #define red_fg (vnl_color("#c83737", 0))
 #define green_fg (vnl_color("#37c837", 0))
+#define blue_fg (vnl_color("#3737c8", 0))
+#define gray_fg (vnl_color("#303030", 0))
+/* Background Colors */
+#define black_bg (vnl_color("#161616", 1))
+#define white_bg (vnl_color("#e9e9e9", 1))
+#define red_bg (vnl_color("#c83737", 1))
+#define green_bg (vnl_color("#37c837", 1))
 #define blue_bg (vnl_color("#3737c8", 1))
-
-/* SIMPLE FRAME */
-void do_frame(int width, int height) {
-    int i = 0;
-    vnl_gotoxy(0, 0);
-    printf("%s%s", green_fg, blue_bg);
-
-    while(width > i) {
-        printf("-");
-        i+=1;
-    } i = 0;
-    printf("\n");
-
-    while(height-2 > i) { int n = 0;
-        printf("|");
-        while(width-2 > n) { printf("%s", vnl_reset);
-            printf(" ");
-            n+=1;
-        } n = 0;
-        printf("%s%s", green_fg, blue_bg);
-        printf("|\n");
-        i+=1;
-    }i = 0;
-
-    while(width > i) {
-        printf("-");
-        i+=1;
-    }
-
-    printf("%s\n", vnl_reset);
-}
+#define gray_bg (vnl_color("#303030", 1))
 
 int main() {
-    while(1) { vnl_terminal("display:clear");
-        int terminal_width = vnl_terminal("get:width");
-        int terminal_height = vnl_terminal("get:height");
-        do_frame(terminal_width, terminal_height-1);
+    int term_width = vnl_terminal("get:width"); /* Get terminal screen width. */
+    int term_height = vnl_terminal("get:height"); /* Get terminal screen height. */
+    char *user_name = getenv("USER");
+    
+    char term_width_chr[16], term_height_chr[16];
+    sprintf(term_width_chr, "%d", term_width);
+    sprintf(term_height_chr, "%d", term_height);
 
-        int pos_x = (terminal_width/2)-8, pos_y = (terminal_height-1)/2;
-        vnl_gotoxy(pos_x, pos_y);
-        printf("%sThis is The Frame%s", red_fg, vnl_reset);
-        vnl_gotoxy(terminal_width, terminal_height-1);
-        printf("\n");
-        usleep(100000);
+    int term_width_len = strlen(term_width_chr); /* Get width length. */
+    int term_height_len = strlen(term_height_chr); /* Get height length. */
+    int user_name_len = strlen(user_name);
+
+    vnl_cursor("visibility:off"); /* Terminal cursor is no longer visible. */
+    vnl_terminal("display:clear"); /* Clean terminal screen. */
+
+    /* Print terminal specs. */
+    vnl_gotoxy(term_width-18-(term_width_len+term_height_len), 1); /* Go to rigth in firt line. */
+    printf("%s[%swidth: %s%d%s, height: %s%d%s]%s", green_fg, white_fg, blue_fg, term_width, white_fg, blue_fg, term_height, green_fg, vnl_reset);
+    
+    vnl_gotoxy(term_width-1-user_name_len, 2); /* Go to rigth in second line. */
+    printf("%s[%s%s%s]%s", green_fg, red_fg, user_name, green_fg, vnl_reset);
+
+    vnl_cursor("position:goto(0:0)"); /* Go to first line. */
+    printf("%sWhat will you do if you want to quit %svim%s?%s\n\n", white_fg, green_fg, white_fg, vnl_reset);
+    printf("%sA. %sI will restart the pc!%s\n", blue_fg, white_fg, vnl_reset);
+    printf("%sB. %sType %s%s:w %s\n", blue_fg, white_fg, red_fg, gray_bg, vnl_reset);
+    printf("%sC. %sType %s%s:q %s\n", blue_fg, white_fg, red_fg, gray_bg, vnl_reset);
+    printf("%sD. %sI have to buy a new pc.%s\n", blue_fg, white_fg, vnl_reset);
+
+    vnl_cursor("position:goto(0:2)"); /* Go to x: 0, y: 2. */
+    printf(" %s%s>%s ", green_fg, vnl_blink, vnl_reset); /* Blink current cursor position. */
+    usleep(500000); /* Wait for 1 second to user focus. */
+    vnl_cursor("position:goto(0:2)"); /* Go to x: 0, y: 2. */
+    printf(" %s>%s ", green_fg, vnl_reset); /* Answer section. */
+
+    char answer_key; /* Answer buffer. */
+    vnl_terminal("io:raw"); /* Terminal input/output mode. */
+    answer_key = getchar(); /* Get char without return key. */
+    vnl_terminal("io:cooked"); /* Normal terminal mode. */
+
+    /* Answer check section. */
+    if (answer_key == 'a') vnl_cursor("position:goto(0:3)");
+    else if (answer_key == 'b') vnl_cursor("position:goto(0:4)");
+    else if (answer_key == 'c') {
+        vnl_cursor("position:goto(0:5)");
+        printf("%s%s%c.%s", blue_fg, green_bg, toupper(answer_key), vnl_reset);
+
+        vnl_cursor("position:goto(4:2)");
+        printf("%s[%sCorrect Answer%s]%s", white_fg, green_fg, white_fg, vnl_reset);
+    }
+    else if (answer_key == 'd') vnl_cursor("position:goto(0:6)");
+    else {
+        vnl_cursor("position:goto(4:2)");
+        printf("%s[%sWrong Key%s]%s", white_fg, red_fg, white_fg, vnl_reset);
+    }
+    if (answer_key == 'a' || answer_key == 'b' || answer_key == 'd')
+    {
+        printf("%s%s%c.%s", blue_fg, red_bg, toupper(answer_key), vnl_reset);
+        vnl_cursor("position:goto(4:2)");
+        printf("%s[%sIncorrect Answer%s]%s", white_fg, red_fg, white_fg, vnl_reset);
     }
 
+    vnl_cursor("screen:save");
+    vnl_terminal("display:clear");
+    printf("Can you see this text? Then your terminal doesn't support screen save/restore feature!");
+    vnl_cursor("screen:restore");
+
+    sleep(2);
+    vnl_cursor("position:goto(0:7)"); /* Go to x: 0, y: 7. */
+    printf("%s[%sScreen Restored%s]%s", white_fg, green_fg, white_fg, vnl_reset);
+
+    vnl_cursor("position:goto(0:8)"); /* Go to x: 0, y: 8. */
+    vnl_cursor("visibility:on"); /* Terminal cursor is now visible. If you change this setting then you need to do that when your program finish. If you don't then terminal cursor will be not visible until you close the terminal. */
     return 0;
 }
 ```
-> ![vnl_info](img/vnl_info.png) You can find more example in `doc/markdown/demo.md` and `doc/html/demo.html` or you can see live examples in `/demo` ![vnl_info](img/vnl_info.png)
 
 ### <div align="center"> ![vnl_info](img/vnl_info.png) License ![vnl_info](img/vnl_info.png) </div>
 ```
