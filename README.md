@@ -84,7 +84,7 @@ $ make clean
 #include <unistd.h> /* 'sleep();' */
 
 #define VNL_UI_IMPLEMENTATION /* UNLOCK THE LIBRARY */
-#include "vnl_ui.h" /* USE LIKE THAT IF YOU INSTALLED THE LIBRARY */
+#include <vn/vnl_ui.h> /* USE LIKE THAT IF YOU INSTALLED THE LIBRARY */
 
 /* Foreground Colors */
 #define black_fg (vnl_color("#161616", 0))
