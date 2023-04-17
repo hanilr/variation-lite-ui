@@ -4,7 +4,7 @@
 <!-- ![vnl_example](../../img/vnl_example.png) -->
 <!-- ![vnl_wiki](../../img/vnl_wiki.png) -->
 
-# <div align="center"> ![vnl_wiki](../../img/vnl_wiki.png) <span style="color:#c83737">Variation-Lite-UI</span><span style="color:#e9e9e9">: </span><span style="color:#3737c8">WIKI ![vnl_wiki](../../img/vnl_wiki.png)</span> </div>
+# <div align="center"> ![vnl_wiki](../../img/vnl_wiki.png) <span style="color:#c83737">Variation-Lite-UI</span>: <span style="color:#3737c8">WIKI ![vnl_wiki](../../img/vnl_wiki.png)</span> </div>
 
 ### ![vnl](../../img/vnl.png) <span style="color:#37c837">Wiki Topics</span> ![vnl](../../img/vnl.png)
 1. Basics
@@ -25,11 +25,11 @@
 
 ## <div align="center"> ![vnl_wiki](../../img/vnl_wiki.png) <span style="color:#3737c8">Basics</span> ![vnl_wiki](../../img/vnl_wiki.png) </div>
 
-<span style="color:#e9e9e9">If you are a newbie about single-header libraries. Then you should not skip this section. If you don't know how to install do not skip this section. If you know how to install and how to use this library then you can skip this section.</span>
+If you are a newbie about single-header libraries. Then you should not skip this section. If you don't know how to install do not skip this section. If you know how to install and how to use this library then you can skip this section.
 
-## ![vnl](../../img/vnl.png) <span style="color:#e9e9e9">Installation</span> ![vnl](../../img/vnl.png)
+## ![vnl](../../img/vnl.png) Installation ![vnl](../../img/vnl.png)
 
-#### ![vnl_warn](../../img/vnl_warn.png) <span style="color:#e9e9e9">Dependencies</span> ![vnl_warn](../../img/vnl_warn.png)
+#### ![vnl_warn](../../img/vnl_warn.png) Dependencies ![vnl_warn](../../img/vnl_warn.png)
 1. First of all this library can work on `Linux` systems.
 2. Your terminal must support `ASCII Escape Sequences`
 3. C programming language compiler: `gcc`
@@ -39,7 +39,7 @@
 5. Debug program: `gdb`
     * [The GNU Project Debugger](https://sourceware.org/gdb/)
 
-## ![vnl](../../img/vnl.png) <span style="color:#e9e9e9">Installation Steps</span> ![vnl](../../img/vnl.png)
+## ![vnl](../../img/vnl.png) Installation Steps ![vnl](../../img/vnl.png)
 1. Clone this repository.
 ```
 $ git clone https://github.com/hanilr/variation-lite-ui.git
@@ -59,7 +59,7 @@ $ make install
 $ make uninstall
 ```
 
-## ![vnl](../../img/vnl.png) <span style="color:#e9e9e9">Shared Library Steps</span> ![vnl](../../img/vnl.png)
+## ![vnl](../../img/vnl.png) Shared Library Steps ![vnl](../../img/vnl.png)
 1. Do the first 2 steps at [Installation Steps](#vnl_example-installation-stepsvnl_example).
 2. Write `make compile` to terminal
 ```
@@ -71,7 +71,7 @@ $ make compile
 $ make clean
 ```
 
-## ![vnl](../../img/vnl.png) <span style="color:#e9e9e9">Include System</span> ![vnl](../../img/vnl.png)
+## ![vnl](../../img/vnl.png) Include System ![vnl](../../img/vnl.png)
 
 ![vnl_info](../../img/vnl_info.png) If you using as local library then you need to define `VNL_UI_IMPLEMENTATION` before including library.
 > ```c
@@ -80,6 +80,7 @@ $ make clean
 > ```
 ![vnl_info](../../img/vnl_info.png) If you installed the library then you don't need to define. You can find this in `<vn/vnl_ui.h>`
 > ```c
+> #define VNL_UI_IMPLEMENTATION
 > #include <vn/vnl_ui.h>
 > ```
 
@@ -87,49 +88,49 @@ $ make clean
 
 ## <div align="center"> ![vnl_wiki](../../img/vnl_wiki.png) <span style="color:#3737c8">How Colors Work?</span> ![vnl_wiki](../../img/vnl_wiki.png) </div>
 
-<span style="color:#e9e9e9">![vnl_info](../../img/vnl_info.png) Did you ever heard the tragedy of darth Plagueis? If you heard, good for you, but its out of context. But if you heard the ascii escape sequence you would understand what I'm talking about. Yes, this library made completely with ascii escape sequence. So, what is ascii escape sequence? You can find out [here](https://gist.github.com/fnky/458719343aabd01cfb17a3a4f7296797). So your terminal must support to ascii escape sequence to using this library.</span>
+![vnl_info](../../img/vnl_info.png) Did you ever heard the tragedy of darth Plagueis? If you heard, good for you, but its out of context. But if you heard the ascii escape sequence you would understand what I'm talking about. Yes, this library made completely with ascii escape sequence. So, what is ascii escape sequence? You can find out [here](https://gist.github.com/fnky/458719343aabd01cfb17a3a4f7296797). So your terminal must support to ascii escape sequence to using this library.
 
-<span style="color:#e9e9e9">![vnl_warn](../../img/vnl_warn.png) Some terminals may not support or not completely support ascii escape sequence.</span>
+![vnl_warn](../../img/vnl_warn.png) Some terminals may not support or not completely support ascii escape sequence.
 
-## ![vnl](../../img/vnl.png) <span style="color:#e9e9e9">What is ASCII?</span> ![vnl](../../img/vnl.png)
+## ![vnl](../../img/vnl.png) What is ASCII? ![vnl](../../img/vnl.png)
 
-<span style="color:#e9e9e9">**ASCII:** American Standard Code for Information Interchange</span>
+**ASCII:** American Standard Code for Information Interchange
 
-<span style="color:#e9e9e9">The most common character encoding format for text data in computers and on the internet. In standard ASCII-encoded data, there are unique values for 128 alphabetic, numeric or special additional characters and control codes.</span>
+The most common character encoding format for text data in computers and on the internet. In standard ASCII-encoded data, there are unique values for 128 alphabetic, numeric or special additional characters and control codes.
 
-<span style="color:#e9e9e9">But why you have to know why you use ASCII? Because, you can use this library because of ASCII.</span>
+But why you have to know why you use ASCII? Because, you can use this library because of ASCII.
 
-## ![vnl](../../img/vnl.png) <span style="color:#e9e9e9">What is Escape Sequences?</span> ![vnl](../../img/vnl.png)
+## ![vnl](../../img/vnl.png) What is Escape Sequences? ![vnl](../../img/vnl.png)
 
-<span style="color:#e9e9e9">**ASCII Escape Sequence:** Character combinations consisting of a backslash (\\) followed by a letter or by a combination of digits are called "escape sequences." To represent a newline character, single quotation mark, or certain other characters in a character constant, you must use escape sequences.</span>
+**ASCII Escape Sequence:** Character combinations consisting of a backslash (\\) followed by a letter or by a combination of digits are called "escape sequences." To represent a newline character, single quotation mark, or certain other characters in a character constant, you must use escape sequences.
 
-<span style="color:#e9e9e9">So, why you should know escape sequences? Becauese, `new line`, `terminal screen cleaning`, `colors`, `terminal cursor position` or `terminal screen manipulation` those are you can use them because of escape sequences.</span>
+So, why you should know escape sequences? Becauese, `new line`, `terminal screen cleaning`, `colors`, `terminal cursor position` or `terminal screen manipulation` those are you can use them because of escape sequences.
 
-## ![vnl](../../img/vnl.png) <span style="color:#e9e9e9">How Can We Use These?</span> ![vnl](../../img/vnl.png)
+## ![vnl](../../img/vnl.png) How Can We Use These? ![vnl](../../img/vnl.png)
 
-<span style="color:#e9e9e9">If you have ASCII supported terminal you can use them.</span>
+If you have ASCII supported terminal you can use them.
 
-<span style="color:#e9e9e9">For example, if you want to print something with color. Then you should do: `printf("%sHey Sup!%s", "\033[38;2;200;55;55m", "\033[0m");` This code will print `Hey Sup!` but foreground red. </span>
+For example, if you want to print something with color. Then you should do: `printf("%sHey Sup!%s", "\033[38;2;200;55;55m", "\033[0m");` This code will print `Hey Sup!` but foreground red.
 
-## ![vnl](../../img/vnl.png) <span style="color:#e9e9e9">Text Styles</span> ![vnl](../../img/vnl.png)
+## ![vnl](../../img/vnl.png) Text Styles ![vnl](../../img/vnl.png)
 
-<span style="color:#e9e9e9">If you have ASCII supported terminal you can use them. Probably `vnl_blink` doesn't work on you terminal. </span>
+If you have ASCII supported terminal you can use them. Probably `vnl_blink` doesn't work on you terminal.
 
-<span style="color:#e9e9e9">There is few text styles in ASCII and here how we use them. </span>
+There is few text styles in ASCII and here how we use them.
 
-1. `vnl_bold`: <span style="color:#e9e9e9">Bold style. </span>
-2. `vnl_italic`: <span style="color:#e9e9e9">Italic style.</span>
-3. `vnl_underline`: <span style="color:#e9e9e9">Normal text with underline.</span>
-4. `vnl_blink`:<span style="color:#e9e9e9">Text will blink.</span>
-5. `vnl_strikethrough`: <span style="color:#e9e9e9">Normal text with strikethrough.</span>
+1. `vnl_bold`: Bold style.
+2. `vnl_italic`: Italic style.
+3. `vnl_underline`: Normal text with underline.
+4. `vnl_blink`: Text will blink.
+5. `vnl_strikethrough`: Normal text with strikethrough.
 
 ---
 
 ## <div align="center"> ![vnl_wiki](../../img/vnl_wiki.png) <span style="color:#3737c8">The Holy Three</span> ![vnl_wiki](../../img/vnl_wiki.png) </div>
 
-<span style="color:#e9e9e9">There is 17 function in this library. But 3 of them is important ones. Because, you can use 14 function with this 3 function. Functions seperated to 3 category. </span>
+There is 17 function in this library. But 3 of them is important ones. Because, you can use 14 function with this 3 function. Functions seperated to 3 category.
 
-## ![vnl](../../img/vnl.png) <span style="color:#e9e9e9">Function List</span> ![vnl](../../img/vnl.png)
+## ![vnl](../../img/vnl.png) Function List ![vnl](../../img/vnl.png)
 
 1. `vnl_color`: General purpose color function. Contains 2 feature.
     * HEX Color and Rgb Color.
@@ -164,9 +165,9 @@ vnl_terminal("get:height"); /* Get terminal height as integer. */
 vnl_terminal("Other Inputs"); /* General purpose stuff. */
 ```
 
-## ![vnl](../../img/vnl.png) <span style="color:#e9e9e9">Alternative Functions</span> ![vnl](../../img/vnl.png)
+## ![vnl](../../img/vnl.png) Alternative Functions ![vnl](../../img/vnl.png)
 
-<span style="color:#e9e9e9">Alternative functions are 14 functions, currently using by the holy three. But why you might need to use these alternatives. For example, you want to set cursor location to specific location. You will use `vnl_cursor` function as `vnl_cursor("position:goto(42:24)")` but you will use this function inside of a loop. And the location will change each time. So you shouldn't use this function. In that case you need to use alternative function. You need to use `vnl_gotoxy` function. At least the algorithm will be not changed. Because `vnl_gotoxy` is `vnl_cursor("position:goto")`. These functions same things because the holy three are functions hubs. So, 3 function literally use 14 function. Also maybe you can save 2-3 byte resource by using these alternative functions.</span>
+Alternative functions are 14 functions, currently using by the holy three. But why you might need to use these alternatives. For example, you want to set cursor location to specific location. You will use `vnl_cursor` function as `vnl_cursor("position:goto(42:24)")` but you will use this function inside of a loop. And the location will change each time. So you shouldn't use this function. In that case you need to use alternative function. You need to use `vnl_gotoxy` function. At least the algorithm will be not changed. Because `vnl_gotoxy` is `vnl_cursor("position:goto")`. These functions same things because the holy three are functions hubs. So, 3 function literally use 14 function. Also maybe you can save 2-3 byte resource by using these alternative functions.
 
 1. Use `vnl_colorizer_rgb(int red, int green, int blue, int base)` over `vnl_color("199 054 002", base)`
 2. Use `vnl_colorizer_hex(char *hex[8], int base)` over `vnl_color("#a1b2c3", base)`

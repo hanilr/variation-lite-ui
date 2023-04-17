@@ -4,15 +4,15 @@
 <!-- ![vnl_example](img/vnl_example.png) -->
 <!-- ![vnl_wiki](img/vnl_wiki.png) -->
 
-# <div align="center"> ![vnl](img/vnl.png) <span style="color:#c83737">Variation-Lite</span><span style="color:#e9e9e9">: UI</span> ![vnl](img/vnl.png)</div>
+# <div align="center"> ![vnl](img/vnl.png) <span style="color:#c83737">Variation-Lite</span>: UI ![vnl](img/vnl.png)</div>
 
-> ![vnl_info](img/vnl_info.png) <span style="color:#e9e9e9"></span> This library is optimized Lite version of [Variation-ui](https://github.com/hanilr/variation-ui).</span> ![vnl_info](img/vnl_info.png)
+> ![vnl_info](img/vnl_info.png) This library is optimized Lite version of [Variation-ui](https://github.com/hanilr/variation-ui). ![vnl_info](img/vnl_info.png)
 
 > ![vnl_warn](img/vnl_warn.png) This library not contain widgets. If you want to use widgets then you need to use [Variation-ui](https://github.com/hanilr/variation-ui) ![vnl_warn](img/vnl_warn.png)
 
 ## <div align="center"> ![vnl](img/vnl.png) <span style="color:#3737c8">About The Project</span> ![vnl](img/vnl.png) </div>
 
-<span style="color:#e9e9e9">After I made [Variation-ui](https://github.com/hanilr/variation-ui) I worked with widgets, but then I never used widgets so I didn't make widgets in this library. Then I realized that my code wasn't working well enough and I changed the algorithm. Then, when I saw that there were too many commands to remember, I categorized all the commands into 3 topics. After doing all this, I realized that this library doesn't even need a wiki page. But there is a wiki document in case you get stuck somewhere.</span>
+After I made [Variation-ui](https://github.com/hanilr/variation-ui) I worked with widgets, but then I never used widgets so I didn't make widgets in this library. Then I realized that my code wasn't working well enough and I changed the algorithm. Then, when I saw that there were too many commands to remember, I categorized all the commands into 3 topics. After doing all this, I realized that this library doesn't even need a wiki page. But there is a wiki document in case you get stuck somewhere.
 
 > ![vnl_info](img/vnl_info.png) You can see html version of wiki documentation in `doc/html/wiki.html` or you can see markdown version of documentation in `doc/markdown/wiki.md` or click: [![vnl_wiki](img/vnl_wiki.png)](doc/markdown/wiki.md)
 
@@ -20,7 +20,7 @@
 
 ## <div align="center"> ![vnl](img/vnl.png) <span style="color:#37c837">Installation</span> ![vnl](img/vnl.png) </div>
 
-### ![vnl_warn](img/vnl_warn.png) <span style="color:#e9e9e9">Dependencies</span> ![vnl_warn](img/vnl_warn.png)
+### ![vnl_warn](img/vnl_warn.png) Dependencies ![vnl_warn](img/vnl_warn.png)
 1. First of all this library can work on `Linux` systems.
 2. Your terminal must support `ASCII Escape Sequences`
 3. C programming language compiler: `gcc`
@@ -30,7 +30,7 @@
 5. Debug program: `gdb`
     * [The GNU Project Debugger](https://sourceware.org/gdb/)
 
-### ![vnl_example](img/vnl_example.png) <span style="color:#e9e9e9">Installation Steps</span> ![vnl_example](img/vnl_example.png)
+### ![vnl_example](img/vnl_example.png) Installation Steps ![vnl_example](img/vnl_example.png)
 1. Clone this repository.
 ```
 $ git clone https://github.com/hanilr/variation-lite-ui.git
@@ -50,7 +50,7 @@ $ make install
 $ make uninstall
 ```
 
-### ![vnl_example](img/vnl_example.png) <span style="color:#e9e9e9">Shared Library Steps</span> ![vnl_example](img/vnl_example.png)
+### ![vnl_example](img/vnl_example.png) Shared Library Steps ![vnl_example](img/vnl_example.png)
 1. Do the first 2 steps at [Installation Steps](#vnl_example-installation-stepsvnl_example).
 2. Write `make compile` to terminal
 ```
@@ -77,11 +77,13 @@ $ make clean
 >> #include <vn/vnl_ui.h>
 >> ```
 
-![vnl_example](img/vnl_example.png) <span style="color:#e9e9e9">All command's usages</span> ![vnl_example](img/vnl_example.png)
+<details>
+<summary>Example</summary>
+
 ```c
 #include <stdio.h> /* 'printf();', 'getchar();' */
 #include <ctype.h> /* 'toupper();' */
-#include <unistd.h> /* 'sleep();' */
+#include <unistd.h> /* 'sleep();', 'usleep();' */
 
 #define VNL_UI_IMPLEMENTATION /* UNLOCK THE LIBRARY */
 #include <vn/vnl_ui.h> /* USE LIKE THAT IF YOU INSTALLED THE LIBRARY */
@@ -164,10 +166,10 @@ int main() {
         printf("%s[%sIncorrect Answer%s]%s", white_fg, red_fg, white_fg, vnl_reset);
     }
 
-    vnl_cursor("screen:save");
-    vnl_terminal("display:clear");
+    vnl_cursor("screen:save"); /* Save terminal screen. */
+    vnl_terminal("display:clear"); /* Clean terminal screen. */
     printf("Can you see this text? Then your terminal doesn't support screen save/restore feature!");
-    vnl_cursor("screen:restore");
+    vnl_cursor("screen:restore"); /* Restore saved terminal screen. */
 
     sleep(2);
     vnl_cursor("position:goto(0:7)"); /* Go to x: 0, y: 7. */
@@ -178,6 +180,8 @@ int main() {
     return 0;
 }
 ```
+
+</details>
 
 ### <div align="center"> ![vnl_info](img/vnl_info.png) License ![vnl_info](img/vnl_info.png) </div>
 ```

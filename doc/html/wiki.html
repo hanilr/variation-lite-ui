@@ -48,7 +48,7 @@
 <!-- CONFIGURATION -->
 
 <!-- CODE -->
-<h1 id="-div-align-center-vnl_wiki-img-vnl_wiki-png-span-style-color-c83737-variation-lite-ui-span-span-style-color-e9e9e9-span-span-style-color-3737c8-wiki-vnl_wiki-img-vnl_wiki-png-span-div-"><div align="center"> <img src="../../img/vnl_wiki.png" alt="vnl_wiki"> <span style="color:#c83737">Variation-Lite-UI</span>: <span style="color:#3737c8">WIKI <img src="../../img/vnl_wiki.png" alt="vnl_wiki"></span> </div></h1>
+<h1 id="-div-align-center-vnl_wiki-img-vnl_wiki-png-span-style-color-c83737-variation-lite-ui-span-span-style-color-3737c8-wiki-vnl_wiki-img-vnl_wiki-png-span-div-"><div align="center"> <img src="../../img/vnl_wiki.png" alt="vnl_wiki"> <span style="color:#c83737">Variation-Lite-UI</span>: <span style="color:#3737c8">WIKI <img src="../../img/vnl_wiki.png" alt="vnl_wiki"></span> </div></h1>
 <h3 id="-vnl-img-vnl-png-span-style-color-37c837-wiki-topics-span-vnl-img-vnl-png-"><img src="../../img/vnl.png" alt="vnl"> <span style="color:#37c837">Wiki Topics</span> <img src="../../img/vnl.png" alt="vnl"></h3>
 <ol>
 <li>Basics<ul>
@@ -61,6 +61,7 @@
 <li>What is ASCII?</li>
 <li>What is Escape Sequences?</li>
 <li>How can we use these?</li>
+<li>Text Styles</li>
 </ul>
 </li>
 <li>The Holy Three<ul>
@@ -73,8 +74,8 @@
 <hr>
 <h2 id="-div-align-center-vnl_wiki-img-vnl_wiki-png-span-style-color-3737c8-basics-span-vnl_wiki-img-vnl_wiki-png-div-"><div align="center"> <img src="../../img/vnl_wiki.png" alt="vnl_wiki"> <span style="color:#3737c8">Basics</span> <img src="../../img/vnl_wiki.png" alt="vnl_wiki"> </div></h2>
 <p>If you are a newbie about single-header libraries. Then you should not skip this section. If you don&#39;t know how to install do not skip this section. If you know how to install and how to use this library then you can skip this section.</p>
-<h2 id="-vnl-img-vnl-png-span-style-color-e9e9e9-installation-span-vnl-img-vnl-png-"><img src="../../img/vnl.png" alt="vnl"> Installation <img src="../../img/vnl.png" alt="vnl"></h2>
-<h4 id="-vnl_warn-img-vnl_warn-png-span-style-color-e9e9e9-dependencies-span-vnl_warn-img-vnl_warn-png-"><img src="../../img/vnl_warn.png" alt="vnl_warn"> Dependencies <img src="../../img/vnl_warn.png" alt="vnl_warn"></h4>
+<h2 id="-vnl-img-vnl-png-installation-vnl-img-vnl-png-"><img src="../../img/vnl.png" alt="vnl"> Installation <img src="../../img/vnl.png" alt="vnl"></h2>
+<h4 id="-vnl_warn-img-vnl_warn-png-dependencies-vnl_warn-img-vnl_warn-png-"><img src="../../img/vnl_warn.png" alt="vnl_warn"> Dependencies <img src="../../img/vnl_warn.png" alt="vnl_warn"></h4>
 <ol>
 <li>First of all this library can work on <code>Linux</code> systems.</li>
 <li>Your terminal must support <code>ASCII Escape Sequences</code></li>
@@ -91,7 +92,7 @@
 </ul>
 </li>
 </ol>
-<h2 id="-vnl-img-vnl-png-span-style-color-e9e9e9-installation-steps-span-vnl-img-vnl-png-"><img src="../../img/vnl.png" alt="vnl"> Installation Steps <img src="../../img/vnl.png" alt="vnl"></h2>
+<h2 id="-vnl-img-vnl-png-installation-steps-vnl-img-vnl-png-"><img src="../../img/vnl.png" alt="vnl"> Installation Steps <img src="../../img/vnl.png" alt="vnl"></h2>
 <ol>
 <li>Clone this repository.<pre><code>$ git <span class="hljs-keyword">clone</span> <span class="hljs-title">https</span>://github.com/hanilr/variation-lite-ui.git
 </code></pre></li>
@@ -108,40 +109,41 @@
 <li>If you want to uninstall this library write <code>make uninstall</code> to terminal in <code>variation-lite-ui</code> folder.<pre><code><span class="hljs-variable">$ </span>make uninstall
 </code></pre></li>
 </ol>
-<h2 id="-vnl-img-vnl-png-span-style-color-e9e9e9-shared-library-steps-span-vnl-img-vnl-png-"><img src="../../img/vnl.png" alt="vnl"> Shared Library Steps <img src="../../img/vnl.png" alt="vnl"></h2>
+<h2 id="-vnl-img-vnl-png-shared-library-steps-vnl-img-vnl-png-"><img src="../../img/vnl.png" alt="vnl"> Shared Library Steps <img src="../../img/vnl.png" alt="vnl"></h2>
 <ol>
-<li>Do the first 2 steps at Installation Steps.</li>
+<li>Do the first 2 steps at <a href="#vnl_example-installation-stepsvnl_example">Installation Steps</a>.</li>
 <li>Write <code>make compile</code> to terminal<pre><code>$ <span class="hljs-built_in">make</span> <span class="hljs-keyword">compile</span>
 </code></pre></li>
 <li>You can use the library as <code>vnl_ui.so</code></li>
 <li>If you want to delete compiled shared library file then write <code>make clean</code> to terminal.<pre><code><span class="hljs-variable">$ </span>make clean
 </code></pre></li>
 </ol>
-<h2 id="-vnl-img-vnl-png-span-style-color-e9e9e9-include-system-span-vnl-img-vnl-png-"><img src="../../img/vnl.png" alt="vnl"> Include System <img src="../../img/vnl.png" alt="vnl"></h2>
+<h2 id="-vnl-img-vnl-png-include-system-vnl-img-vnl-png-"><img src="../../img/vnl.png" alt="vnl"> Include System <img src="../../img/vnl.png" alt="vnl"></h2>
 <p><img src="../../img/vnl_info.png" alt="vnl_info"> If you using as local library then you need to define <code>VNL_UI_IMPLEMENTATION</code> before including library.</p>
 <blockquote>
 <pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> VNL_UI_IMPLEMENTATION</span>
 <span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">"vnl_ui.h"</span></span>
 </code></pre>
 <p><img src="../../img/vnl_info.png" alt="vnl_info"> If you installed the library then you don&#39;t need to define. You can find this in <code>&lt;vn/vnl_ui.h&gt;</code></p>
-<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;vn/vnl_ui.h&gt;</span></span>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> VNL_UI_IMPLEMENTATION</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;vn/vnl_ui.h&gt;</span></span>
 </code></pre>
 </blockquote>
 <hr>
 <h2 id="-div-align-center-vnl_wiki-img-vnl_wiki-png-span-style-color-3737c8-how-colors-work-span-vnl_wiki-img-vnl_wiki-png-div-"><div align="center"> <img src="../../img/vnl_wiki.png" alt="vnl_wiki"> <span style="color:#3737c8">How Colors Work?</span> <img src="../../img/vnl_wiki.png" alt="vnl_wiki"> </div></h2>
 <p><img src="../../img/vnl_info.png" alt="vnl_info"> Did you ever heard the tragedy of darth Plagueis? If you heard, good for you, but its out of context. But if you heard the ascii escape sequence you would understand what I&#39;m talking about. Yes, this library made completely with ascii escape sequence. So, what is ascii escape sequence? You can find out <a href="https://gist.github.com/fnky/458719343aabd01cfb17a3a4f7296797">here</a>. So your terminal must support to ascii escape sequence to using this library.</p>
 <p><img src="../../img/vnl_warn.png" alt="vnl_warn"> Some terminals may not support or not completely support ascii escape sequence.</p>
-<h2 id="-vnl-img-vnl-png-span-style-color-e9e9e9-what-is-ascii-span-vnl-img-vnl-png-"><img src="../../img/vnl.png" alt="vnl"> What is ASCII? <img src="../../img/vnl.png" alt="vnl"></h2>
+<h2 id="-vnl-img-vnl-png-what-is-ascii-vnl-img-vnl-png-"><img src="../../img/vnl.png" alt="vnl"> What is ASCII? <img src="../../img/vnl.png" alt="vnl"></h2>
 <p><strong>ASCII:</strong> American Standard Code for Information Interchange</p>
 <p>The most common character encoding format for text data in computers and on the internet. In standard ASCII-encoded data, there are unique values for 128 alphabetic, numeric or special additional characters and control codes.</p>
 <p>But why you have to know why you use ASCII? Because, you can use this library because of ASCII.</p>
-<h2 id="-vnl-img-vnl-png-span-style-color-e9e9e9-what-is-escape-sequences-span-vnl-img-vnl-png-"><img src="../../img/vnl.png" alt="vnl"> What is Escape Sequences? <img src="../../img/vnl.png" alt="vnl"></h2>
+<h2 id="-vnl-img-vnl-png-what-is-escape-sequences-vnl-img-vnl-png-"><img src="../../img/vnl.png" alt="vnl"> What is Escape Sequences? <img src="../../img/vnl.png" alt="vnl"></h2>
 <p><strong>ASCII Escape Sequence:</strong> Character combinations consisting of a backslash (\) followed by a letter or by a combination of digits are called &quot;escape sequences.&quot; To represent a newline character, single quotation mark, or certain other characters in a character constant, you must use escape sequences.</p>
 <p>So, why you should know escape sequences? Becauese, <code>new line</code>, <code>terminal screen cleaning</code>, <code>colors</code>, <code>terminal cursor position</code> or <code>terminal screen manipulation</code> those are you can use them because of escape sequences.</p>
-<h2 id="-vnl-img-vnl-png-span-style-color-e9e9e9-how-can-we-use-these-span-vnl-img-vnl-png-"><img src="../../img/vnl.png" alt="vnl"> How Can We Use These? <img src="../../img/vnl.png" alt="vnl"></h2>
+<h2 id="-vnl-img-vnl-png-how-can-we-use-these-vnl-img-vnl-png-"><img src="../../img/vnl.png" alt="vnl"> How Can We Use These? <img src="../../img/vnl.png" alt="vnl"></h2>
 <p>If you have ASCII supported terminal you can use them.</p>
-<p>For example, if you want to print something with color. Then you should do: <code>printf(&quot;%sHey Sup!%s&quot;, &quot;\033[38;2;200;55;55m&quot;, &quot;\033[0m&quot;);</code> This code will print <code>Hey Sup!</code> but foreground red. </p>
-<h2 id="-vnl-img-vnl-png-span-style-color-e9e9e9-text-styles-span-vnl-img-vnl-png-"><img src="../../img/vnl.png" alt="vnl"> Text Styles <img src="../../img/vnl.png" alt="vnl"></h2>
+<p>For example, if you want to print something with color. Then you should do: <code>printf(&quot;%sHey Sup!%s&quot;, &quot;\033[38;2;200;55;55m&quot;, &quot;\033[0m&quot;);</code> This code will print <code>Hey Sup!</code> but foreground red.</p>
+<h2 id="-vnl-img-vnl-png-text-styles-vnl-img-vnl-png-"><img src="../../img/vnl.png" alt="vnl"> Text Styles <img src="../../img/vnl.png" alt="vnl"></h2>
 <p>If you have ASCII supported terminal you can use them. Probably <code>vnl_blink</code> doesn&#39;t work on you terminal.</p>
 <p>There is few text styles in ASCII and here how we use them.</p>
 <ol>
@@ -153,8 +155,8 @@
 </ol>
 <hr>
 <h2 id="-div-align-center-vnl_wiki-img-vnl_wiki-png-span-style-color-3737c8-the-holy-three-span-vnl_wiki-img-vnl_wiki-png-div-"><div align="center"> <img src="../../img/vnl_wiki.png" alt="vnl_wiki"> <span style="color:#3737c8">The Holy Three</span> <img src="../../img/vnl_wiki.png" alt="vnl_wiki"> </div></h2>
-<p>There is 17 function in this library. But 3 of them is important ones. Because, you can use 14 function with this 3 function. Functions seperated to 3 category. </p>
-<h2 id="-vnl-img-vnl-png-span-style-color-e9e9e9-function-list-span-vnl-img-vnl-png-"><img src="../../img/vnl.png" alt="vnl"> Function List <img src="../../img/vnl.png" alt="vnl"></h2>
+<p>There is 17 function in this library. But 3 of them is important ones. Because, you can use 14 function with this 3 function. Functions seperated to 3 category.</p>
+<h2 id="-vnl-img-vnl-png-function-list-vnl-img-vnl-png-"><img src="../../img/vnl.png" alt="vnl"> Function List <img src="../../img/vnl.png" alt="vnl"></h2>
 <ol>
 <li><code>vnl_color</code>: General purpose color function. Contains 2 feature.<ul>
 <li>HEX Color and Rgb Color.</li>
@@ -192,7 +194,7 @@
 </ul>
 </li>
 </ol>
-<h2 id="-vnl-img-vnl-png-span-style-color-e9e9e9-alternative-functions-span-vnl-img-vnl-png-"><img src="../../img/vnl.png" alt="vnl"> Alternative Functions <img src="../../img/vnl.png" alt="vnl"></h2>
+<h2 id="-vnl-img-vnl-png-alternative-functions-vnl-img-vnl-png-"><img src="../../img/vnl.png" alt="vnl"> Alternative Functions <img src="../../img/vnl.png" alt="vnl"></h2>
 <p>Alternative functions are 14 functions, currently using by the holy three. But why you might need to use these alternatives. For example, you want to set cursor location to specific location. You will use <code>vnl_cursor</code> function as <code>vnl_cursor(&quot;position:goto(42:24)&quot;)</code> but you will use this function inside of a loop. And the location will change each time. So you shouldn&#39;t use this function. In that case you need to use alternative function. You need to use <code>vnl_gotoxy</code> function. At least the algorithm will be not changed. Because <code>vnl_gotoxy</code> is <code>vnl_cursor(&quot;position:goto&quot;)</code>. These functions same things because the holy three are functions hubs. So, 3 function literally use 14 function. Also maybe you can save 2-3 byte resource by using these alternative functions.</p>
 <ol>
 <li>Use <code>vnl_colorizer_rgb(int red, int green, int blue, int base)</code> over <code>vnl_color(&quot;199 054 002&quot;, base)</code></li>
